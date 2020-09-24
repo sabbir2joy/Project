@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2020 at 12:59 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Sep 24, 2020 at 03:58 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -73,7 +74,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `fname`, `lname`, `phone`, `dob`, `address`, `email`, `usertype`, `username`, `password`) VALUES
 (16, 'Md', 'Hossain', 1879, 111900, 'West tangra, Sarulia, Demra, Dhaka', 'sabbir2joy@gmail.com', 'Admin', 'sabbir', '1234'),
-(17, 'Joy', 'Hassan', 1234, 111900, 'Dhaka', 'abc', 'Worker', 'joy', '1234');
+(17, 'Joy', 'Hassan', 1234, 111900, 'Dhaka', 'abc', 'Worker', 'joy', '1234'),
+(20, 'sefgsafg', 'asgfdasfsadfasdfas', 453, 111900, 'asdfasdfsdf', 'af@sdfadsf', 'Admin', 'mahmud', '12345678'),
+(21, 'sadfsdf', 'sdfasdfdsaf', 326437, 111900, 'asdfafda', 'sdfgsd@sdgfzsfds', 'Admin', 'hasib', '12345678');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +92,8 @@ ALTER TABLE `inventory`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -105,7 +109,7 @@ ALTER TABLE `inventory`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -9,8 +9,6 @@
 <body>
 	<?php
 
-	
-
 	$err_fname = "";
 	$fname = "";
 	$err_lname = "";
@@ -38,7 +36,7 @@
 			} else {
 				$fname = $_POST['fname'];
 			}
-	
+
 			if (empty($_POST['lname'])) {
 				$err_lname = "<h6 id = 'errmsglname'>*Last Name Required</h6>";
 				$has_error = true;
@@ -68,6 +66,28 @@
 				$has_error = true;
 			} else {
 				$usname = $_POST['un'];
+
+
+				// Username availability validation
+		// 		$sqlUserCheck = "SELECT username FROM login WHERE username = '$username'";
+		// 		$result = mysqli_query($conn, $sqlUserCheck);
+
+		// 		while ($row = mysqli_fetch_assoc($result)) {
+		// 			$uNameInDB = $row['username'];
+		// 		}
+
+		// 		if (!empty($firstname) && !empty($lastname) && !empty($email) && !empty($nid) && !empty($username) && !empty($password)) {
+		// 			if ($uNameInDB == $username) {
+		// 				$uNameInDBerr = "Username already taken!";
+		// 			} else {
+		// 				$sql = "INSERT INTO login (firstname, lastname, email, nid, username, password, type) 
+		// VALUES ('$firstname','$lastname', '$email', '$nid', '$username', '$uPassToDB', 'user');";
+		// 				mysqli_query($conn, $sql);
+
+		// 				$firstname = $lastname = $email = $nid = $username = $password = $uPassToDB = $result = "";
+		// 				$success = "Successfully Submitted.";
+		// 			}
+		// 		}
 			}
 			if (empty($_POST['pass'])) {
 				$err_password = "<h6 id = 'errmsgpass'>*Password Required</h6>";
@@ -82,15 +102,15 @@
 				$usertype = $_POST['usertype'];
 			}
 
-			$dob = ($_POST['day'])."-".($_POST['month'])."-".($_POST['year']);
+			$dob = ($_POST['day']) . "-" . ($_POST['month']) . "-" . ($_POST['year']);
 
 			if ($has_error != true) {
-				require_once '../controllers/signupcontroller.php';
+				include '../controllers/signupcontroller.php';
 				insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
 			}
 		}
 	}
-	
+
 	?>
 	<img src="../storage/images/signupicon.png" class="avatar">
 

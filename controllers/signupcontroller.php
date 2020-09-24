@@ -2,11 +2,11 @@
 
 require_once '../models/dbConnection.php';
 
-if (isset($_POST["signup"])) {
-	insertInformation();
-}
+// if (isset($_POST["signup"])) {
+// 	insertInformation();
+// }
 
-function insertInformation()
+function insertInformation($fname, $lname, $phone, $dob, $address, $email, $usertype, $username, $password)
 {
 	$fname = $_POST["fname"];
 	$lname = $_POST["lname"];
