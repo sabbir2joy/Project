@@ -27,51 +27,55 @@
 	$psw = "";
 	$has_error = false;
 
-	if (isset($_POST['signup'])) {
-		if (empty($_POST['fname'])) {
-			$err_fname = "<h6 id = 'errmsgfname'>*First Name Required</h6>";
-			$has_error = true;
-		} else {
-			$fname = $_POST['fname'];
-		}
 
-		if (empty($_POST['lname'])) {
-			$err_lname = "<h6 id = 'errmsglname'>*Last Name Required</h6>";
-			$has_error = true;
-		} else {
-			$lname = $_POST['lname'];
-		}
-		if (empty($_POST['phone'])) {
-			$err_num = "<h6 id = 'errmsgnum'>*Phone Number Required</h6>";
-			$has_error = true;
-		} else {
-			$pnum = $_POST['phone'];
-		}
-		if (empty($_POST['add'])) {
-			$err_address = "<h6 id = 'errmsgadd'>*Address Required</h6>";
-			$has_error = true;
-		} else {
-			$ad = $_POST['add'];
-		}
-		if (empty($_POST['email'])) {
-			$err_email = "<h6 id = 'errmsgemail'>*Email Required</h6>";
-			$has_error = true;
-		} else {
-			$em = $_POST['email'];
-		}
-		if (empty($_POST['un'])) {
-			$err_username = "<h6 id = 'errmsgun'>*Username Required</h6>";
-			$has_error = true;
-		} else {
-			$usname = $_POST['un'];
-		}
-		if (empty($_POST['pass'])) {
-			$err_password = "<h6 id = 'errmsgpass'>*Password Required</h6>";
-			$has_error = true;
-		} else {
-			$psw = $_POST['pass'];
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		if (isset($_POST['signup'])) {
+			if (empty($_POST['fname'])) {
+				$err_fname = "<h6 id = 'errmsgfname'>*First Name Required</h6>";
+				$has_error = true;
+			} else {
+				$fname = $_POST['fname'];
+			}
+	
+			if (empty($_POST['lname'])) {
+				$err_lname = "<h6 id = 'errmsglname'>*Last Name Required</h6>";
+				$has_error = true;
+			} else {
+				$lname = $_POST['lname'];
+			}
+			if (empty($_POST['phone'])) {
+				$err_num = "<h6 id = 'errmsgnum'>*Phone Number Required</h6>";
+				$has_error = true;
+			} else {
+				$pnum = $_POST['phone'];
+			}
+			if (empty($_POST['add'])) {
+				$err_address = "<h6 id = 'errmsgadd'>*Address Required</h6>";
+				$has_error = true;
+			} else {
+				$ad = $_POST['add'];
+			}
+			if (empty($_POST['email'])) {
+				$err_email = "<h6 id = 'errmsgemail'>*Email Required</h6>";
+				$has_error = true;
+			} else {
+				$em = $_POST['email'];
+			}
+			if (empty($_POST['un'])) {
+				$err_username = "<h6 id = 'errmsgun'>*Username Required</h6>";
+				$has_error = true;
+			} else {
+				$usname = $_POST['un'];
+			}
+			if (empty($_POST['pass'])) {
+				$err_password = "<h6 id = 'errmsgpass'>*Password Required</h6>";
+				$has_error = true;
+			} else {
+				$psw = $_POST['pass'];
+			}
 		}
 	}
+	
 	?>
 	<img src="../storage/images/signupicon.png" class="avatar">
 
@@ -184,7 +188,7 @@
 				</tr>
 			</table>
 		</form>
-		<script src="main.js"></script>
+		<!-- <script src="main.js"></script> -->
 
 
 
