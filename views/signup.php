@@ -20,6 +20,7 @@
 	$err_email = "";
 	$em = "";
 	$err_username = "";
+	$errmsg_usname="";
 	$usname = "";
 	$err_password = "";
 	$psw = "";
@@ -33,50 +34,64 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (isset($_POST['signup'])) {
 			if (empty($_POST['fname'])) {
-				$err_fname = "<h6 id = 'errmsgfname'>*First Name Required</h6>";
+				$err_fname = "<h4 id = 'errmsgfname'>*First Name Required</h4>";
 				$has_error = true;
 			} else {
 				$fname = $_POST['fname'];
 			}
 
 			if (empty($_POST['lname'])) {
-				$err_lname = "<h6 id = 'errmsglname'>*Last Name Required</h6>";
+				$err_lname = "<h4 id = 'errmsglname'>*Last Name Required</h4>";
 				$has_error = true;
 			} else {
 				$lname = $_POST['lname'];
 			}
 			if (empty($_POST['phone'])) {
-				$err_num = "<h6 id = 'errmsgnum'>*Phone Number Required</h6>";
+				$err_num = "<h4 id = 'errmsgnum'>*Phone Number Required</h4>";
 				$has_error = true;
 			} else {
 				$pnum = $_POST['phone'];
 			}
 			if (empty($_POST['add'])) {
-				$err_address = "<h6 id = 'errmsgadd'>*Address Required</h6>";
+				$err_address = "<h4 id = 'errmsgadd'>*Address Required</h4>";
 				$has_error = true;
 			} else {
 				$ad = $_POST['add'];
 			}
 			if (empty($_POST['email'])) {
-				$err_email = "<h6 id = 'errmsgemail'>*Email Required</h6>";
+				$err_email = "<h4 id = 'errmsgemail'>*Email Required</h4>";
 				$has_error = true;
 			} else {
 				$em = $_POST['email'];
 			}
+
 			if (empty($_POST['un'])) {
-				$err_username = "<h6 id = 'errmsgun'>*Username Required</h6>";
+				$err_username = "<h4 id = 'errmsgun'>*Username Required</h4>";
 				$has_error = true;
-			} else {
-				$usname = $_POST['un'];
+
+			} else if(strlen($_POST['un'])<4) {
+				$err_username ="<h4 id='errmsgun'>*Username length must be more than 4</h4>";
+				$has_error=true;
+
 			}
+			else{
+				$usname=$_POST['un'];
+			}
+
 			if (empty($_POST['pass'])) {
-				$err_password = "<h6 id = 'errmsgpass'>*Password Required</h6>";
+				$err_password = "<h4 id = 'errmsgpass'>*Password Required</h4>";
 				$has_error = true;
-			} else {
+			}
+			else if(strlen($_POST['pass'])<4){
+				$err_password= "<h4 id = 'errmsgpass'>*Password length must be more than 4</h4>";
+				$has_error = true;
+			}
+
+			else {
 				$psw = $_POST['pass'];
 			}
 			if (empty($_POST['usertype'])) {
-				$err_usertype = "<h6 id = 'errmsgpass'>*User type Required</h6>";
+				$err_usertype = "<h4 id = 'errmsgpass'>*User type Required</h4>";
 				$has_error = true;
 			} else {
 				$usertype = $_POST['usertype'];
@@ -85,24 +100,14 @@
 			$dob = ($_POST['day']) . "-" . ($_POST['month']) . "-" . ($_POST['year']);
 
 			if ($has_error != true) {
-				// Username availability validation
-				$sqlUserCheck = "SELECT username FROM users WHERE username = '$usname'";
-				$result = mysqli_query($conn, $sqlUserCheck); //change this line according to your project
-
-				while ($row = mysqli_fetch_assoc($result)) { //change this line according to your project
-					$uNameInDB = $row['username'];
-				}
-
-				if ($uNameInDB == $username) {
-					$uNameInDBerr = "Username already taken!";
-				} else {
-					include '../controllers/signupcontroller.php';
-					insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
-					$success = "Successfully Submitted.";
+				
+				include '../controllers/signupcontroller.php';
+				insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
+					
 				}				
 			}
 		}
-	}
+	
 
 	?>
 	<img src="../storage/images/signupicon.png" class="avatar">
@@ -133,7 +138,7 @@
 				<tr>
 					<td>Phone Number</td>
 					<td>
-						<input type="number" id="pNumber" placeholder='Enter your phone number' name='phone' value="">
+						<input type="text" id="pNumber" placeholder='Enter your phone number' name='phone' value="">
 					</td>
 					<td id="pNumberMsg">
 						<span style="color:red"><?php echo $err_num; ?></span>
@@ -177,7 +182,7 @@
 				<tr>
 					<td>Email</td>
 					<td>
-						<input type='email' id="email" placeholder='Enter your email address' name='email' value="">
+						<input type='text' id="email" placeholder='Enter your email address' name='email' value="">
 					</td>
 					<td id="emailMsg">
 						<span style="color:red"><?php echo $err_email; ?></span>
@@ -216,10 +221,7 @@
 				</tr>
 			</table>
 		</form>
-		<!-- <script src="main.js"></script> -->
-
-
-
+		 <!-- <script src="../js/main.js"></script>  -->
 
 	</div>
 </body>

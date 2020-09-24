@@ -23,7 +23,7 @@
 			
 			if(empty($_POST['uname']))
 			{
-				$err_uname="<h6 id = 'errmsgus'>*UserID Required</h6>";
+				$err_uname="<h5 id = 'errmsgus'>*UserID Required</h5>";
 				$has_error = true;
 			}
 			else
@@ -32,7 +32,7 @@
 			}
 			if(empty($_POST['pass']))
 			{
-				$err_pass="<h6 id = 'errmsgpass'>*Password Required</h6>";
+				$err_pass="<h5 id = 'errmsgpass'>*Password Required</h5>";
 				$has_error = true;
 			}
 			else
@@ -55,15 +55,13 @@
 				}
 				else
 				{
-					$err_invalid = "<h6 class = 'invalidmsg' >Invalid UserID Password</h6>";
+					$err_invalid = "<h5 class = 'invalidmsg' >Invalid UserID Password</h5>";
 				}
 			}		
 			
 		}
 		
 	?>
-	
-	
 		<div class = "loginBox">
 			<img src = "../storage/images/user.png" class = "avatar">
 			<h1>Login Here</h1>

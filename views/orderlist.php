@@ -23,6 +23,7 @@
 	<head>
 		<title>Order List</title>
 		<link rel="stylesheet" type="text/css" href= "styles/orderListDesign.css">
+		<script src="../js/main.js"></script>
 	</head>
 	<body>
 	<span id = 'orderListheading'>Order List</span>

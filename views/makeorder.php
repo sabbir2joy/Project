@@ -1,7 +1,4 @@
-<html>
-
-	<?php
-	
+<?php
 		require_once "../controllers/makeordercontrollersearch.php";
 		require_once "../models/dbConnection.php";
 		
@@ -47,7 +44,7 @@
 		<title>Make Order</title>
 		<link rel="stylesheet" type="text/css" href= "styles/makeOrderDesign.css">
 		<script>
-			function search()
+		function search()
 			{
 				var xhttp = new XMLHttpRequest();
 				var search_txt = document.getElementById("searchbox").value;
@@ -63,6 +60,7 @@
 				xhttp.open("GET","../controllers/makeordercontrollersearch.php?key="+search_txt,true);
 				xhttp.send();
 			}
+		
 		</script>
 	</head>
 	<body>
@@ -86,7 +84,7 @@
 					Search Product
 				</td>
 				<td>
-					<input type ="text" onkeyup = "search()" id="searchbox" size = '60' placeholder="Write Name">
+					<input type ="text" onkeyup = "return search()" id="searchbox" size = '60' placeholder="Write Name">
 					<div id="search_result">
 				</td>
 			</tr>
@@ -128,7 +126,7 @@
 							}
 						}
 				
-						mysqli_close($con);
+					mysqli_close($con);
 					
 				}
 		?>
@@ -173,5 +171,6 @@
 	</table>
 	</div>
 	</body>
+
 	
 </html>
