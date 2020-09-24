@@ -9,7 +9,7 @@
 <body>
 	<?php
 
-	//require_once '../controllers/signupcontroller.php';
+	
 
 	$err_fname = "";
 	$fname = "";
@@ -25,6 +25,8 @@
 	$usname = "";
 	$err_password = "";
 	$psw = "";
+	$err_usertype = "";
+	$usertype = "";
 	$has_error = false;
 
 
@@ -73,6 +75,19 @@
 			} else {
 				$psw = $_POST['pass'];
 			}
+			if (empty($_POST['usertype'])) {
+				$err_usertype = "<h6 id = 'errmsgpass'>*User type Required</h6>";
+				$has_error = true;
+			} else {
+				$usertype = $_POST['usertype'];
+			}
+
+			$dob = ($_POST['day'])."-".($_POST['month'])."-".($_POST['year']);
+
+			if ($has_error != true) {
+				require_once '../controllers/signupcontroller.php';
+				insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
+			}
 		}
 	}
 	
@@ -105,7 +120,7 @@
 				<tr>
 					<td>Phone Number</td>
 					<td>
-						<input type='text' id="pNumber" placeholder='Enter your phone number' name='phone' value="">
+						<input type="number" id="pNumber" placeholder='Enter your phone number' name='phone' value="">
 					</td>
 					<td id="pNumberMsg">
 						<span style="color:red"><?php echo $err_num; ?></span>
@@ -149,7 +164,7 @@
 				<tr>
 					<td>Email</td>
 					<td>
-						<input type='text' id="email" placeholder='Enter your email address' name='email' value="">
+						<input type='email' id="email" placeholder='Enter your email address' name='email' value="">
 					</td>
 					<td id="emailMsg">
 						<span style="color:red"><?php echo $err_email; ?></span>
@@ -158,7 +173,7 @@
 				<tr>
 					<td>User Type</td>
 					<td>
-						<select name='usertype'>
+						<select name="usertype" id="usertype">
 							<!--<option>Super Admin</option>-->
 							<option value='Admin'>Admin</option>
 							<option value='Worker'>Worker</option>
