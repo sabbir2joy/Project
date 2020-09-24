@@ -45,14 +45,7 @@
 			</tr>
 			<tr>
 				<td>
-					<p>
-					In 2018 Obaidul Khan Atif came up with the idea of opening a shop that will serve daily necessaries to the local customers.
-					He presented the idea to Md Rittique Alam and Hasan Mahmud and three of them then started their journey as auntrapranors. They started
-					their business with a very low amount of innitial investment but they were relentless and determined to succeed. And after that they
-					worked day and night for the company. During the struggling period Kazi Maruf joint them as a partner of the company now four of them
-					started working together. Their business kept growing and in this time Obaidul Khan Nasif joint them as their fifth and final partner. 
-					Still now they all are working together as a team to make Daily Super Shop one of the leading shop chains of Bangladesh.
-					</p>
+					
 				</td>
 			</tr>
 			<tr>
@@ -63,11 +56,7 @@
 			<tr>
 				<td align= 'top'>
 					<ul>
-						<li>Md Rittique Alam, Managing Director</li>
-						<li>Obaidul Islam Atif, Cheif Executive Officer</li>
-						<li>Obaidul Islam Nasif, Public Relations Officer</li>
-						<li>Hasan Mahmud, Head of Accounts</li>
-						<li>Kazi Maruf, Investing Partner</li>
+						
 					</ul>
 				</td>
 			</tr>
