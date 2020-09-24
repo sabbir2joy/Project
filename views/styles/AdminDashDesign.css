@@ -1,0 +1,131 @@
+body	
+{	
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../storage/images/4287.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+}
+
+
+.main ul
+{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	
+}
+
+.main ul li
+{
+	display: inline-block;
+}
+
+
+.main ul li a
+{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: none;
+	transition: 0.6s ease;
+	
+}
+.main ul li a:hover
+{
+	background: #fff;
+	color: #1c8adb;
+}
+
+.main input[type = 'submit']
+{
+	text-decoration: none;
+	background: transparent;
+	color: #fff;
+	border: None;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	padding: 5px 20px;
+	transition: 0.6s ease;
+	font-family: sans-serif;
+	font-size: 17px;
+}
+.main input[type = 'submit']:hover
+{
+	cursor: pointer;
+	background: #b30000;
+	color: white;
+	
+}
+
+#welcometext
+{
+	float: left;
+	margin: 20px 20px;
+	font-size: 30px;
+	font-family: century gothic;
+	color: #fff;
+}
+
+.main ul li .active a
+{
+	background: #fff;
+	color: #1c8adb;
+}
+
+.centerpiece
+{
+	position: absolute;
+	font-family: century gothic;
+	top: 25%;
+	left: 26%;
+	transform: translet(50%, 50%);
+	font-size: 45px;
+	color: #fff;
+}
+
+.centerbuttons
+{	
+	position: absolute;
+	top: 52%;
+	left: 39.25%;
+	transform: translet(50%, 50%);
+
+}
+
+.centerbuttons a
+{
+	font-family: century gothic;
+	font-size: 15px;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 10px;
+	padding: 10 30 10 30px;
+	border: 1px solid #fff;
+}
+
+.centerbuttons a:hover
+{
+	background: white;
+	color: black;
+	transition: 1s ease;
+}
+
+#accountsheading
+{
+	float: left;
+	margin: 20px 20px;
+	font-size: 30px;
+	font-family: century gothic;
+	color: #fff;
+}
+
+.accountsinfo
+{
+	margin-left: 20px;
+	margin-top: 50px;
+	font-family: sans-serif;
+	color: #fff;
+	text-decoration: none;
+}

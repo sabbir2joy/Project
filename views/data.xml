@@ -1,0 +1,11 @@
+<info>
+	<usertype class="user">
+		<id>User</id>
+		<password>123</password>
+	</usertype>
+	
+	<usertype class="admin">
+		<id>Admin</id>
+		<password>123456</password>
+	</usertype>
+</info>

@@ -1,0 +1,274 @@
+body	
+{	
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../storage/images/3545189.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+}
+
+.main ul
+{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	
+}
+
+.main ul li
+{
+	display: inline-block;
+}
+
+
+.main ul li a
+{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: none;
+	transition: 0.6s ease;
+	
+}
+.main ul li a:hover
+{
+	background: #fff;
+	color: #1c8adb;
+}
+
+.main input[type = 'submit']
+{
+	text-decoration: none;
+	background: transparent;
+	color: #fff;
+	border: None;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	padding: 5px 20px;
+	transition: 0.6s ease;
+	font-family: sans-serif;
+	font-size: 17px;
+}
+.main input[type = 'submit']:hover
+{
+	cursor: pointer;
+	background: #b30000;
+	color: white;
+	
+}
+
+#makeorderheading
+{
+	float: left;
+	font-family: century gothic;
+	font-size: 45px;
+	color: #fff;
+	margin: 20px 25px;
+}
+
+#orderprocedure
+{
+	float: center-left;
+	font-family: century gothic;
+	font-size: 30px;
+	color: #fff;
+	margin: 10px 405px;
+	padding-bottom: 0px;
+}
+
+.orderingmenu
+{
+	float: center;
+	margin: 10 200 10 10px;
+	padding: 10px 20px 10px 20px;
+	font-family: century gothic;
+	width: 720px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 30%;
+	left: 26%;
+	position: absolute;
+	
+	
+}
+
+.orderingmenu td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 15px;
+	color: #fff;
+}
+
+.orderingmenu input
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.orderingmenu input[type="text"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.orderingmenu input[type = "submit"]
+{
+	border: 1px solid #fff;
+	outline: none;
+	height: 30px;
+	width: 80px;
+	background: transparent;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 18px;
+	margin: 15 10 15 10px;
+	
+
+}
+
+.orderingmenu input[type = "submit"]:hover
+{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+}
+
+.searchInventorybar
+{
+	float: center;
+	margin-left: 50px;
+	padding: 120px 50px 0px;
+	margin-bottom: 0px;
+	font-family: century gothic;
+}
+
+.searchInventorybar td
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 25px;
+	color: #fff;
+}
+
+.searchInventorybar input
+{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.searchInventorybar input[type="text"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.searchInventorybar input[type = "submit"]
+{
+	border: 1px solid #fff;
+	outline: none;
+	height: 30px;
+	background: transparent;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 18px;
+
+}
+
+.searchInventorybar input[type = "submit"]:hover
+{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+}
+
+
+.addproducttable
+{
+	
+	float: left;
+	margin-left: 5px;
+	padding: 60px 300px 0px;
+	margin-bottom: 0px;
+	font-family: century gothic;
+	margin-top: 0px;
+	
+
+}
+
+.addproducttable td
+{
+	padding: 10 12 10 10px;
+	margin-left: 15px;
+	margin-right: 50px;
+	font-family: century gothic;
+	width: 120px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 30%;
+	left: 26%;
+	position: center;
+	margin-bottom: 20px;
+	
+}
+
+
+.addproducttable2
+{
+	
+	float: left;
+	margin-left: 5px;
+	padding: 60px 300px 0px;
+	margin-bottom: 0px;
+	font-family: century gothic;
+
+}
+
+.addproducttable2 td
+{
+	padding: 10 12 10 10px;
+	margin-left: 15px;
+	margin-right: 50px;
+	font-family: century gothic;
+	width: 120px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	top: 30%;
+	left: 26%;
+	position: center;
+	
+}
+
+#search_result
+{
+	float: center;
+	background: white;
+	color: black;
+	text-decoration: none;
+	font-size: 5;
+	
+}
+
+#removeitem
+{
+	text-decoration: none;
+	font-family: century gothic;
+	color: white;
+	
+}
+#quanbox
+{
+	width: 20;
+}
+

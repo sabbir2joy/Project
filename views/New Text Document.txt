@@ -1,0 +1,62 @@
+<script>
+			
+			/*
+                
+             function validateForm() {
+  var fname = document.forms["myForm"]["fname"].value;
+  var lname = document.forms["myForm"]["lname"].value;
+  var phone = document.forms["myForm"]["phone"].value;
+  var add = document.forms["myForm"]["add"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var un = document.forms["myForm"]["un"].value;
+  var pass = document.forms["myForm"]["pass"].value;
+  if (fname == "") {
+		alert("Name must be filled out");
+      
+    return false;
+  }
+  
+  if (lname == "") {
+		alert("last Name must be filled out");
+      
+    return false;
+  }
+  
+  if (phone == "") {
+		alert("Phone must be filled out");
+      
+    return false;
+  }
+  
+  if (add == "") {
+		alert("Address must be filled out");
+      
+    return false;
+  }
+  
+  if (email == "") {
+		alert("Email must be filled out");
+      
+    return false;
+  }
+  if (un == "") {
+		alert("Username must be filled out");
+      
+    return false;
+  }
+  
+  if (pass == "") {
+		alert("Password must be filled out");
+      
+    return false;
+  }
+  else{
+  return true;
+  }
+  
+               
+}
+		*/
+
+         
+			</script>
