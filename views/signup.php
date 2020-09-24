@@ -9,7 +9,7 @@
 <body>
 	<?php
 
-	require '../controllers/signupcontroller.php';
+	//require_once '../controllers/signupcontroller.php';
 
 	$err_fname = "";
 	$fname = "";
@@ -99,7 +99,7 @@
 						<input type='text' id="lName" placeholder='Enter your last name' name='lname' value="">
 					</td>
 					<td id="lNameMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_lname; ?> </span>
 					</td>
 				<tr>
 				<tr>
@@ -108,7 +108,7 @@
 						<input type='text' id="pNumber" placeholder='Enter your phone number' name='phone' value="">
 					</td>
 					<td id="pNumberMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_num; ?></span>
 					</td>
 				<tr>
 				<tr>
@@ -143,7 +143,7 @@
 						<input type='text' id="address" placeholder='Enter your address' name='add' value="">
 					</td>
 					<td id="addressMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_address; ?></span>
 					</td>
 				<tr>
 				<tr>
@@ -152,7 +152,7 @@
 						<input type='text' id="email" placeholder='Enter your email address' name='email' value="">
 					</td>
 					<td id="emailMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_email; ?></span>
 					</td>
 				<tr>
 				<tr>
@@ -171,7 +171,7 @@
 						<input type="text" id="userName" placeholder='Enter your username' name='un' value="">
 					</td>
 					<td id="userNameMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_username; ?></span>
 					</td>
 				</tr>
 				<tr>
@@ -180,7 +180,7 @@
 						<input type="password" id="pass" placeholder='Enter your password' name='pass' value="">
 					</td>
 					<td id="passMsg">
-						<span style="color:red"></span>
+						<span style="color:red"><?php echo $err_password; ?></span>
 					</td>
 				</tr>
 				<tr>

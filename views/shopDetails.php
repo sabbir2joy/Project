@@ -35,6 +35,7 @@
 			<li><a href= "makeorder.php">Make order</a></li>
 			<li><a href= "adminworkerlist.php">Admin and Worker list</a></li>
 			<li><a href= "login.php">Logout</a></li>
+			
 			</ul>
 	</div>
 	<div class = 'shopdetailswritten'>
