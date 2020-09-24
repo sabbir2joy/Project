@@ -26,6 +26,8 @@
 	$err_usertype = "";
 	$usertype = "";
 	$has_error = false;
+	$uNameInDB="";
+	$success = "";
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -66,28 +68,6 @@
 				$has_error = true;
 			} else {
 				$usname = $_POST['un'];
-
-
-				// Username availability validation
-		// 		$sqlUserCheck = "SELECT username FROM login WHERE username = '$username'";
-		// 		$result = mysqli_query($conn, $sqlUserCheck);
-
-		// 		while ($row = mysqli_fetch_assoc($result)) {
-		// 			$uNameInDB = $row['username'];
-		// 		}
-
-		// 		if (!empty($firstname) && !empty($lastname) && !empty($email) && !empty($nid) && !empty($username) && !empty($password)) {
-		// 			if ($uNameInDB == $username) {
-		// 				$uNameInDBerr = "Username already taken!";
-		// 			} else {
-		// 				$sql = "INSERT INTO login (firstname, lastname, email, nid, username, password, type) 
-		// VALUES ('$firstname','$lastname', '$email', '$nid', '$username', '$uPassToDB', 'user');";
-		// 				mysqli_query($conn, $sql);
-
-		// 				$firstname = $lastname = $email = $nid = $username = $password = $uPassToDB = $result = "";
-		// 				$success = "Successfully Submitted.";
-		// 			}
-		// 		}
 			}
 			if (empty($_POST['pass'])) {
 				$err_password = "<h6 id = 'errmsgpass'>*Password Required</h6>";
@@ -105,8 +85,21 @@
 			$dob = ($_POST['day']) . "-" . ($_POST['month']) . "-" . ($_POST['year']);
 
 			if ($has_error != true) {
-				include '../controllers/signupcontroller.php';
-				insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
+				// Username availability validation
+				$sqlUserCheck = "SELECT username FROM users WHERE username = '$usname'";
+				$result = mysqli_query($conn, $sqlUserCheck); //change this line according to your project
+
+				while ($row = mysqli_fetch_assoc($result)) { //change this line according to your project
+					$uNameInDB = $row['username'];
+				}
+
+				if ($uNameInDB == $username) {
+					$uNameInDBerr = "Username already taken!";
+				} else {
+					include '../controllers/signupcontroller.php';
+					insertInformation($fname, $lname, $pnum, $dob, $ad, $em, $usertype, $usname, $psw);
+					$success = "Successfully Submitted.";
+				}				
 			}
 		}
 	}
