@@ -110,10 +110,11 @@
 	
 
 	?>
+	
+	<div class="signup-form">
 	<img src="../storage/images/signupicon.png" class="avatar">
 
 	<h1 id="sign-up">Sign up</h1>
-	<div class="signup-form">
 		<form name="myForm" id="myForm" action="" onsubmit="return validateForm(event)" method="post">
 
 			<table>

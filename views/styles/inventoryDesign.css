@@ -1,276 +1,239 @@
-body	
-{	
-	margin: 0;
-	padding: 0;
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../storage/images/15334.jpg);
-	background-size: cover;
-	background-position: center;
-	font-family: sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../storage/images/15334.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
 }
 
-.main ul
-{
-	float: right;
-	list-style-type: none;
-	margin-top: 25px;
-	
+.main ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
 }
 
-.main ul li
-{
-	display: inline-block;
+.main ul li {
+    display: inline-block;
 }
 
-
-.main ul li a
-{
-	text-decoration: none;
-	color: #fff;
-	padding: 5px 20px;
-	border: none;
-	transition: 0.6s ease;
-	
-}
-.main ul li a:hover
-{
-	background: #fff;
-	color: #1c8adb;
+.main ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    transition: 0.6s ease;
 }
 
-.main input[type = 'submit']
-{
-	text-decoration: none;
-	background: transparent;
-	color: #fff;
-	border: None;
-	margin-right: 15px;
-	margin-bottom: 5px;
-	padding: 5px 20px;
-	transition: 0.6s ease;
-	font-family: sans-serif;
-	font-size: 17px;
-}
-.main input[type = 'submit']:hover
-{
-	cursor: pointer;
-	background: #b30000;
-	color: white;
-	
+.main ul li a:hover {
+    background: #fff;
+    color: #1c8adb;
 }
 
-#inventoryheading
-{
-	float: left;
-	font-family: century gothic;
-	font-size: 45px;
-	color: #fff;
-	margin: 20px 25px;
+.main input[type='submit'] {
+    text-decoration: none;
+    background: transparent;
+    color: #fff;
+    border: None;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    padding: 5px 20px;
+    transition: 0.6s ease;
+    font-family: sans-serif;
+    font-size: 17px;
 }
 
-.inventorSearch
-{
-	float: center;
-	margin-left: 50px;
-	padding: 120px 50px 0px;
-	margin-bottom: 0px;
-	font-family: century gothic;
+.main input[type='submit']:hover {
+    cursor: pointer;
+    background: #b30000;
+    color: white;
 }
 
-.inventorSearch td
-{
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size: 25px;
-	color: #fff;
+#inventoryheading {
+    float: left;
+    font-family: century gothic;
+    font-size: 45px;
+    color: #fff;
+    margin: 20px 25px;
 }
 
-.inventorSearch input
-{
-	width: 100%;
-	margin-bottom: 20px;
+.inventorSearch {
+    float: center;
+    margin-left: 50px;
+    padding: 120px 50px 0px;
+    margin-bottom: 0px;
+    font-family: century gothic;
 }
 
-.inventorSearch input[type="text"]
-{
-	border: none;
-	border-bottom: 1px solid #fff;
-	background: transparent;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 16px;
+.inventorSearch td {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    color: #fff;
 }
 
-.inventorSearch input[type = "submit"]
-{
-	border: 1px solid #fff;
-	outline: none;
-	height: 30px;
-	background: transparent;
-	color: #fff;
-	font-family: sans-serif;
-	font-size: 18px;
-
+.inventorSearch input {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.inventorSearch input[type = "submit"]:hover
-{
-	cursor: pointer;
-	background: #fff;
-	color: #000;
+.inventorSearch input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
 }
 
-#productinsertupdatedelete
-{
-	padding-top: 100px;
-	font-family: century gothic;
-	font-size: 30px;
-	color: #fff;
-	margin-top: 1000px;
-	margin-left: 405px;
-	padding-bottom: 0px;
+.inventorSearch input[type="submit"] {
+    border: 1px solid #fff;
+    outline: none;
+    height: 30px;
+    background: transparent;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
-.productaddingmenu
-{
-	float: center;
-	margin: 0 200 10 10px;
-	padding: 10px 20px 10px 20px;
-	font-family: century gothic;
-	width: 720px;
-	background: rgba(0, 0, 0, 0.5);
-	color: #fff;
-	top: 30%;
-	left: 26%;
-	position: absolute;
-	
-	
+.inventorSearch input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
 }
 
-.productaddingmenu td
-{
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size: 15px;
-	color: #fff;
+#productinsertupdatedelete {
+    padding-top: 100px;
+    font-family: century gothic;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 1000px;
+    margin-left: 405px;
+    padding-bottom: 0px;
 }
 
-.productaddingmenu input
-{
-	width: 100%;
-	margin-bottom: 20px;
+.productaddingmenu {
+    float: center;
+    margin: 0 200 10 10px;
+    padding: 10px 20px 10px 20px;
+    font-family: century gothic;
+    width: 720px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 30%;
+    left: 26%;
+    position: absolute;
 }
 
-.productaddingmenu input[type="text"]
-{
-	border: none;
-	border-bottom: 1px solid #fff;
-	background: transparent;
-	outline: none;
-	height: 40px;
-	color: #fff;
-	font-size: 16px;
+.productaddingmenu td {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: #fff;
 }
 
-.productaddingmenu input[type = "submit"]
-{
-	border: 1px solid #fff;
-	outline: none;
-	height: 30px;
-	width: 80px;
-	background: transparent;
-	color: #fff;
-	font-family: sans-serif;
-	font-size: 18px;
-	margin: 15 10 15 10px;
-	
-
+.productaddingmenu input {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.productaddingmenu input[type = "submit"]:hover
-{
-	cursor: pointer;
-	background: #fff;
-	color: #000;
+.productaddingmenu input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
 }
 
-
-#errmsgus
-{	margin: 0;
-	padding: 0 0 5px;
-	font-size = 5px;
-}	
-
-.dbtable
-{
-	float: center;
-	margin: 500 200 10 10px;
-	padding: 10px 20px 10px 20px;
-	font-family: century gothic;
-	width: 720px;
-	background: rgba(0, 0, 0, 0.5);
-	color: #fff;
-	top: 30%;
-	left: 26%;
-	position: absolute;
+.productaddingmenu input[type="submit"] {
+    border: 1px solid #fff;
+    outline: none;
+    height: 30px;
+    width: 80px;
+    background: transparent;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 15 10 15 10px;
 }
 
-.dbtable td
-{
-	padding-left: 30px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	font-size: 15px;
-	color: #fff;
+.productaddingmenu input[type="submit"]:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
 }
 
-.dbtable th
-{
-	padding-left: 20px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	font-size: 15px;
-	color: #fff;
+#errmsgus {
+    margin: 0;
+    padding: 0 0 5px;
+    font-size: 5px;
 }
 
-.ebtn
-{
-	border: none;
-	outline: none;
-	height: 10px;
-	width: 30px;
-	background: #66a3ff;
-	color: #fff;
-	font-family: sans-serif;
-	font-size: 14px;
-	margin-left: 5px;
-	padding: 3.5px;
-	text-decoration: none;
+.dbtable {
+    float: center;
+    margin: 500 200 10 10px;
+    padding: 10px 20px 10px 20px;
+    font-family: century gothic;
+    width: 720px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 30%;
+    left: 26%;
+    position: absolute;
 }
 
-.ebtn:hover
-{
-	background: #006bb3;
+.dbtable td {
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
 }
 
-
-.dbtn
-{
-	border: none;
-	outline: none;
-	height: 15px;
-	width: 45px;
-	background: #b30000;
-	color: #fff;
-	font-family: sans-serif;
-	font-size: 14px;
-	margin-left: 5px;
-	padding: 3.5px;
+.dbtable th {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
 }
 
-.dbtn:hover
-{
-	background: white;
-	color: #b30000;
-	cursor: pointer;
+.ebtn {
+    border: none;
+    outline: none;
+    height: 10px;
+    width: 30px;
+    background: #66a3ff;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 3.5px;
+    text-decoration: none;
+}
+
+.ebtn:hover {
+    background: #006bb3;
+}
+
+.dbtn {
+    border: none;
+    outline: none;
+    height: 15px;
+    width: 45px;
+    background: #b30000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 3.5px;
+}
+
+.dbtn:hover {
+    background: white;
+    color: #b30000;
+    cursor: pointer;
 }

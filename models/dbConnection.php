@@ -9,7 +9,7 @@
 		global $userName;
 		global $password;
 		global $dbName;
-		$conn = mysqli_connect($serverName, $userName,  $password, $dbName) or die(mysql_error($conn));
+		$conn = mysqli_connect($serverName, $userName,  $password, $dbName) or die ("Unable to connect to $conn");
 		mysqli_query($conn,$query);
 	}
 	
