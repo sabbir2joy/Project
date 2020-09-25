@@ -33,7 +33,7 @@
 			<li><a href= "#">Inventory</a></li>
 			<li><a href= "#">Order list</a></li>
 			<li><a href= "#">Make order</a></li>
-			<li><input type="submit" name="submit" value = "Logout"></li>
+			<li><a href= "logout.php">Logout</a></li>
 			</ul>
 		</form>
 		</div>

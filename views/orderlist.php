@@ -38,7 +38,7 @@
 			<li><a href= "accounts.php">Accounts</a></li>
 			<li><a href= "customerinformation.php">Customer Information</a></li>
 			<li><a href= "#">Admin and Worker list</a></li>
-			<li><input type="submit" name="submit" value = "Logout"></li>
+			<li><a href= "logout.php">Logout</a></li>
 		</ul>
 	</div>
 	
